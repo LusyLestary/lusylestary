@@ -1,0 +1,301 @@
+/* Responsive Styles */
+/* Desktop - Menampilkan navbarr dan menyembunyikan navbar */
+@media (min-width: 1024px) {
+  .navbar {
+    display: none;
+  }
+  .navbarr {
+    display: flex;
+    margin-right: -200px;
+  }
+}
+
+/* Tablet - Menampilkan navbarr dan menyembunyikan navbar */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .navbar {
+    display: none;
+  }
+  .navbarr {
+    display: flex;
+  }
+}
+
+/* Mobile - Menampilkan navbar dan menyembunyikan navbarr */
+@media (max-width: 768px) {
+  .navbarr {
+    display: none;
+  }
+  .navbar {
+    display: none; /* Awalnya tersembunyi */
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    background-color: #fff; /* Background putih */
+    backdrop-filter: blur(10px); /* Blur belakang */
+    position: absolute;
+    top: 60px; /* Mengatur jarak dari bagian atas header */
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan di bawah navbar */
+    z-index: 1000;
+    padding: 1rem; /* Padding di sekitar navbar */
+  }
+
+  /* Navbar yang aktif akan terlihat */
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar a {
+    border: 0.1rem var(--main-color) solid;
+    border-left: 0.5rem var(--main-color) solid;
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    color: #333; /* Warna teks */
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .navbar a:hover,
+  .navbar a.active {
+    background-color: #f4f4f4; /* Warna latar belakang saat hover atau aktif */
+    color: #901d78; /* Warna teks saat hover atau aktif */
+  }
+
+  .icons div {
+    background-color: #fefe;
+  }
+
+  #menu-bar {
+    display: block;
+  }
+}
+
+/* Tambahan untuk memastikan ikon menu tampil hanya di mobile */
+@media (min-width: 769px) {
+  #menu-bar {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home {
+    margin-top: 180px;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  .home-image {
+    margin-left: -160px;
+    margin-top: 100px;
+    width: 80%;
+    max-width: 200px;
+  }
+  .home-content h1 {
+    font-size: 4.2rem;
+  }
+  .btn-home {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  .btn-home a {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .btn-home a:last-child {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 768px) {
+  .home {
+    margin-bottom: -180px;
+  }
+  .home-content h1 {
+    font-size: 3.2rem;
+  }
+  .home-image {
+    max-width: 150px;
+    margin-bottom: 350px;
+  }
+  .btn-home a {
+    font-size: 14px;
+    height: 45px;
+  }
+}
+@media (max-width: 480px) {
+  .home-content h1 {
+    font-size: 2.8rem;
+  }
+  .btn-home {
+    width: 100%;
+  }
+  .btn-home a {
+    font-size: 12px;
+    height: 40px;
+  }
+  .home-image {
+    max-width: 120px;
+  }
+}
+@media (max-width: 768px) {
+  .about {
+    margin-top: 0px;
+    margin-bottom: 100px;
+  }
+  .about p {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    margin-top: 0px;
+    margin-bottom: -70px;
+  }
+  .service-box {
+    margin-bottom: 4rem;
+  }
+  .service-box h3 {
+    font-size: 2rem;
+  }
+  .service-box p {
+    font-size: 1.4rem;
+  }
+  .service-icon img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 720px) {
+  .product-box img {
+    width: 80%;
+    max-width: none;
+  }
+  .product-box {
+    padding: 1rem;
+    height: 298px;
+  }
+  .product-box h3 {
+    font-size: 1.2rem;
+  }
+  .product-box p {
+    font-size: 1rem;
+  }
+
+  .product {
+    margin-top: 50px;
+    margin-bottom: -90px;
+  }
+}
+@media (max-width: 640px) {
+  .product-box img {
+    width: 40%;
+    max-width: none;
+  }
+  .product-box {
+    padding: 1rem;
+    height: 298px;
+  }
+  .product-box h3 {
+    margin-top: -10px;
+    font-size: 2rem;
+  }
+  .product-box p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .klien-box {
+    width: calc(33.333% - 1rem);
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .klien-box {
+    width: calc(50% - 1rem);
+  }
+}
+@media (max-width: 480px) {
+  .klien-box {
+    width: calc(100% - 1rem);
+  }
+}
+
+@media (max-width: 720px) {
+  .klien-box img {
+    width: 80%;
+    max-width: none;
+  }
+  .klien-box {
+    padding: 1rem;
+    height: 298px;
+  }
+  .klien-box h3 {
+    font-size: 1.2rem;
+  }
+  .klien-box p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 640px) {
+  .klien-box img {
+    width: 40%;
+    max-width: none;
+  }
+  .klien-box {
+    padding: 1rem;
+    height: 298px;
+  }
+  .klien-box h3 {
+    margin-top: -10px;
+    font-size: 2rem;
+  }
+  .klien-box p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-section {
+    margin-bottom: 2rem;
+  }
+  .iframe {
+    margin-right: 19px;
+  }
+  .alamat {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .clients-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .clients-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .client-card {
+    padding: 15px;
+  }
+  .client-card h3 {
+    font-size: 1.2rem;
+  }
+}
